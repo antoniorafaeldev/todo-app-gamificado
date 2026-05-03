@@ -15,14 +15,22 @@
         <div class="user-stats-header">
           <div class="user-info">
             <h2 class="username">User</h2>
-            <div class="icon">
-                <img src="./assets/img/pencil-dark.svg" alt="Pencil Icon | Edit Username">
-            </div>
+            <button class="icon">
+              <img
+                src="./assets/img/pencil-dark.svg"
+                alt="Pencil Icon | Edit Username"
+                class="pencil-icon"
+              />
+            </button>
           </div>
 
-          <div class="icon">
-            <img src="./assets/img/sun.svg" alt="Sun Icon | Toggle Theme">
-          </div>
+          <button class="icon" id="toggle-theme-btn">
+            <img
+              src="./assets/img/sun.svg"
+              class="theme-icon"
+              alt="Sun Icon | Toggle Theme"
+            />
+          </button>
         </div>
         <div class="user-progress">
           <span class="level">Level 1</span>
@@ -61,36 +69,64 @@
 
       <section class="task-section">
         <ul class="task-list">
-          <li class="task completed">
+          <li class="task">
             <label class="task-header">
-                <input
-                  type="checkbox"
-                  name="task-markoff"
-                  class="task-checkbox__input"
-                />
-                <span class="task-checkbox__box" aria-hidden="true"></span>
-                <span class="task-title">Tarefa teste</span>
+              <input
+                type="checkbox"
+                name="task-markoff"
+                class="task-checkbox__input"
+              />
+              <span class="task-checkbox__box" aria-hidden="true"></span>
+              <span class="task-title">Tarefa teste</span>
             </label>
-            <div class="trash-icon">
-              <img src="./assets/img/trash-dark.svg" alt="Trash Icon | Delete Task">
-            </div>
+            <button class="trash-icon">
+              <img
+                src="./assets/img/trash-dark.svg"
+                alt="Trash Icon | Delete Task"
+                class="trash-icon-img"
+              />
+            </button>
           </li>
           <li class="task">
             <label class="task-header">
-                <input
-                  type="checkbox"
-                  name="task-markoff"
-                  class="task-checkbox__input"
-                />
-                <span class="task-checkbox__box" aria-hidden="true"></span>
-                <span>Tarefa teste 2</span>
+              <input
+                type="checkbox"
+                name="task-markoff"
+                class="task-checkbox__input"
+              />
+              <span class="task-checkbox__box" aria-hidden="true"></span>
+              <span>Tarefa teste 2</span>
             </label>
-            <div class="trash-icon">
-              <img src="./assets/img/trash-dark.svg" alt="Trash Icon | Delete Task">
-            </div>
+            <button class="trash-icon">
+              <img
+                src="./assets/img/trash-dark.svg"
+                alt="Trash Icon | Delete Task"
+                class="trash-icon-img"
+              />
+            </button>
+          </li>
+          <li class="task">
+            <label class="task-header">
+              <input
+                type="checkbox"
+                name="task-markoff"
+                class="task-checkbox__input"
+              />
+              <span class="task-checkbox__box" aria-hidden="true"></span>
+              <span>Tarefa teste 2</span>
+            </label>
+            <button class="trash-icon">
+              <img
+                src="./assets/img/trash-dark.svg"
+                alt="Trash Icon | Delete Task"
+                class="trash-icon-img"
+              />
+            </button>
           </li>
         </ul>
       </section>
     </main>
+
+    <script type="module" src="./src/js/main.js"></script>
   </body>
 </html>

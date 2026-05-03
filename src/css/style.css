@@ -42,6 +42,14 @@ body {
   align-items: center;
 }
 
+button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+
+}
+
 .title {
   margin: 1.25rem 0;
 }
