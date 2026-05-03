@@ -1,29 +1,3 @@
-/*
-Objetivo: criar uma função pra criar tarefas pro botão do input submit
-A primeira coisa que ele tem quer fazer é evitar o reload da página, para isso
-
-Dados que serão pegues: Título da tarefa (value do input text)
-
-Criar uma estrutura:
-          <li class="task">
-            <label class="task-header">
-              <input
-                type="checkbox"
-                name="task-markoff"
-                class="task-checkbox__input"
-              />
-              <span class="task-checkbox__box" aria-hidden="true"></span>
-              <span class="task-title">Tarefa teste</span>
-            </label>
-            <button class="trash-icon">
-              <img
-                src="./assets/img/trash-dark.svg"
-                alt="Trash Icon | Delete Task"
-                class="trash-icon-img"
-              />
-            </button>
-
-*/
 
 export function createTask(title) {
 

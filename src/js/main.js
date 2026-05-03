@@ -1,6 +1,7 @@
 import { toggleTheme } from "./theme.js";
 import { createTask } from "./createTask.js";
 import { deleteTask } from "./deleteTask.js";
+import { checkTask } from "./checkTask.js";
 
 const themeButton = document.getElementById("toggle-theme-btn");
 
@@ -19,7 +20,16 @@ createTaskButton.addEventListener("click", (event) => {
 taskList.addEventListener("click", (event) => {
     const btn = event.target.closest(".trash-icon");
     if (!btn || !taskList.contains(btn)) return;
+    
     deleteTask(btn);
 });
+
+taskList.addEventListener("change", (event) => {
+    const checkbox = event.target.closest(".task-checkbox__input");
+    if (!checkbox || !taskList.contains(checkbox)) return;
+
+    checkTask(checkbox);
+});
+
 
 
