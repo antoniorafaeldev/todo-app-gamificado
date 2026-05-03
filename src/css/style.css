@@ -13,9 +13,17 @@
   --tertiary-color: #16223f;
   --pendent-task-bg: #1e293b;
   --completed-task-bg: #16223f;
+  --light-bg-color:  #e0e0e8;
+  --light-primary-color: #007AFF;
+  --light-text-color: #1a1a1c;
+  --light-secondary-color: #6b7280;
+  --light-border-color: #f2f2f4;
+  --light-task-bg: #ffffff;
+  --light-completed-text-color: #9CA3AF;
 
   --primary-accent-color: #2563eb;
   --level-color: #3b82f6;
+
 
   --checkbox-size: 2rem;
   --checkbox-icon-scale: 0.45;
@@ -101,6 +109,11 @@ body {
   background-color: var(--tertiary-color);
   padding: 0.5rem;
   color: #ffffff;
+
+}
+
+.task-creation-input:focus {
+  outline: none;
 }
 
 .create-task-button {
@@ -111,7 +124,7 @@ body {
   color: #ffffff;
 }
 
-.subtitulo {
+.subtitle {
   margin: 1rem 0;
   padding-bottom: 0.25rem;
 
@@ -206,7 +219,57 @@ body {
   transform: scale(1);
 }
 
+.task-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .completed .task-title {
     text-decoration: line-through;
     color: rgba(255, 255, 255, 0.6);
+}
+
+.light body {
+  background-color: var(--light-bg-color);
+  color: var(--light-text-color);
+}
+
+.light .user-stats {
+  background-color: var(--light-task-bg);
+}
+
+.light .level {
+  color: var(--light-primary-color);
+}
+
+.light .task-creation-label {
+  background-color: var(--light-task-bg);
+}
+
+.light .task-creation-input {
+  background-color: var(--light-task-bg);
+  color: var(--light-text-color);
+}
+
+.light .create-task-button {
+  background-color: var(--light-primary-color);
+  color: var(--light-task-bg);
+}
+
+.light .subtitle {
+  border-bottom: 2px solid var(--light-border-color);
+}
+
+.light .task {
+  background-color: var(--light-task-bg);
+}
+
+.light .completed .task-title {
+  color: var(--light-completed-text-color);
+}
+
+.light .task-checkbox__box {
+  background: var(--light-task-bg);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
