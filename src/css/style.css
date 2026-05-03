@@ -92,6 +92,25 @@ body {
   font-size: 2rem;
 }
 
+.progress-bar-container {
+  margin-top: 0.5rem;
+  width: 100%;
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--pendent-task-bg);
+  border-radius: 0.25rem;
+
+}
+
+.progress-bar {
+  margin-top: 0.5rem;
+  width: 50%;
+  height: 0.75rem;
+  border-radius: 0.5rem;
+  background-color: var(--light-primary-color);
+  border-radius: 0.25rem;  
+}
+
 .task-creation-label {
   background-color: var(--tertiary-color);
   border-radius: 0.5rem;
@@ -242,6 +261,10 @@ body {
 .light .level {
   color: var(--light-primary-color);
 }
+
+.light .progress-bar-container {
+  background-color: var(--light-border-color);
+} 
 
 .light .task-creation-label {
   background-color: var(--light-task-bg);
