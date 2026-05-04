@@ -2,6 +2,8 @@ import { toggleTheme } from "./theme.js";
 import { createTask } from "./createTask.js";
 import { deleteTask } from "./deleteTask.js";
 import { checkTask } from "./checkTask.js";
+import { currentXp, xpNeeded, level, levelUp } from "./levelManager.js";
+
 
 const themeButton = document.getElementById("toggle-theme-btn");
 
