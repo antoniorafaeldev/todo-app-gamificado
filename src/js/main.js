@@ -16,6 +16,9 @@ themeButton.addEventListener("click", toggleTheme);
 
 createTaskButton.addEventListener("click", (event) => {
   event.preventDefault();
+  
+  if (taskInput.value.trim() === "") return;
+
   createTask(taskInput.value);
   taskInput.value = "";
 });
