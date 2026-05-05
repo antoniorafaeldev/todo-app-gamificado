@@ -6,9 +6,17 @@ export function toggleTheme(){
 
     const isLight = html.classList.contains('light');
     toggleIcons(isLight);
+    saveThemePreference();
+    
 }
 
-function toggleIcons(isLight) {
+function saveThemePreference() {
+    const html = document.documentElement;
+    const isLight = html.classList.contains('light');
+    localStorage.setItem('theme', isLight ? 'light' : 'dark');
+}
+
+export function toggleIcons(isLight) {
     const pencilDark = './assets/img/pencil-dark.svg';
     const pencilLight = './assets/img/pencil-light.svg';
     const sun = './assets/img/sun.svg';

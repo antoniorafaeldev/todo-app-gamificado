@@ -1,13 +1,15 @@
-/*
-    Oque preciso fazer:
 
-    Pegar os dados que já tão no local storage e coloca nos texts contents
+import { toggleIcons } from "./theme.js";
 
-*/
 const currentXpElement = document.getElementById("current-xp");
 const neededXpElement = document.getElementById("needed-xp");
 const levelElement = document.getElementById("level");
 const progressBar = document.getElementById("progress-bar");
+
+export function initializeStats() {
+    loadLevelInformation();
+    loadThemePreference();
+}
 
 export function loadLevelInformation() {
     const savedCurrentXp = localStorage.getItem("currentXp");
@@ -27,6 +29,18 @@ export function loadLevelInformation() {
     }
     if (savedProgressPercentage !== null) {
         progressBar.style.width = parseInt(savedProgressPercentage) + "%";
+    }
+
+}
+
+export function loadThemePreference() {
+    const savedTheme = localStorage.getItem('theme');
+
+    if (savedTheme === 'light') {
+        document.documentElement.classList.add('light');
+        toggleIcons(true);
+    } else {
+        document.documentElement.classList.remove('light');
     }
 
 }

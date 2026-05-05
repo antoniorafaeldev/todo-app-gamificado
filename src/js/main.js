@@ -3,14 +3,14 @@ import { createTask } from "./createTask.js";
 import { deleteTask } from "./deleteTask.js";
 import { checkTask } from "./checkTask.js";
 import { addXp, removeXp, updateLevelInformation } from "./levelManager.js";
-import { loadLevelInformation } from "./loadStats.js";
+import { initializeStats } from "./loadStats.js";
 
 const themeButton = document.getElementById("toggle-theme-btn");
 const createTaskButton = document.getElementById("create-task-button");
 const taskInput = document.getElementById("task-creation-input");
 const taskList = document.getElementById("task-list");
-    
-loadLevelInformation();
+
+document.addEventListener("DOMContentLoaded", initializeStats)
 
 themeButton.addEventListener("click", toggleTheme);
 
