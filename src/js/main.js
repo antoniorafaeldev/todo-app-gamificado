@@ -52,3 +52,20 @@ taskList.addEventListener("change", (event) => {
     updateLevelInformation();
   }
 });
+
+taskList.addEventListener("keydown", (event) => {
+  if (event.key === "Enter") {
+    const checkbox = event.target.closest(".task-checkbox__input");
+    if (!checkbox || !taskList.contains(checkbox)) return;
+
+    checkTask(checkbox);
+    if (checkbox.checked) {
+      checkbox.checked = false; 
+      addXp(20);
+      updateLevelInformation();
+    } else {
+      checkbox.checked = true;
+      removeXp(20);
+      updateLevelInformation();
+    }
+}});
