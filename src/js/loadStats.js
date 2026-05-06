@@ -9,6 +9,7 @@ const progressBar = document.getElementById("progress-bar");
 export function initializeStats() {
     loadLevelInformation();
     loadThemePreference();
+    loadUsername();
 }
 
 export function loadLevelInformation() {
@@ -43,4 +44,11 @@ export function loadThemePreference() {
         document.documentElement.classList.remove('light');
     }
 
+}
+
+export function loadUsername() {
+    const savedUsername = localStorage.getItem("username");
+    const usernameElement = document.getElementById("username");
+
+    if (savedUsername !== null) usernameElement.textContent = savedUsername;
 }

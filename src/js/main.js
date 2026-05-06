@@ -4,15 +4,18 @@ import { deleteTask } from "./deleteTask.js";
 import { checkTask } from "./checkTask.js";
 import { addXp, removeXp, updateLevelInformation } from "./levelManager.js";
 import { initializeStats } from "./loadStats.js";
+import { editUsername } from "./editUsername.js";
 
 const themeButton = document.getElementById("toggle-theme-btn");
 const createTaskButton = document.getElementById("create-task-button");
 const taskInput = document.getElementById("task-creation-input");
 const taskList = document.getElementById("task-list");
+const editUsernameButton = document.getElementById("edit-username-btn");
 
 document.addEventListener("DOMContentLoaded", initializeStats)
 
 themeButton.addEventListener("click", toggleTheme);
+editUsernameButton.addEventListener("click", editUsername);
 
 createTaskButton.addEventListener("click", (event) => {
   event.preventDefault();
