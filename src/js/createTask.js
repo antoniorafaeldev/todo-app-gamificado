@@ -1,8 +1,4 @@
-
 export function createTask(title) {
-
-
-    
   const html = document.documentElement;
   const taskList = document.getElementById("task-list");
   const taskItem = document.createElement("li");
@@ -14,7 +10,6 @@ export function createTask(title) {
   const taskTitle = createTaskTitle(title);
   const trashIcon = createTrashIcon();
   const trashIconImg = createTrashIconImg();
-
 
   taskHeader.appendChild(checkbox);
   taskHeader.appendChild(checkboxBox);
@@ -69,7 +64,7 @@ function createTrashIcon() {
 }
 
 function createTrashIconImg() {
-    const html = document.documentElement; 
+  const html = document.documentElement;
 
   const trashIconImg = document.createElement("img");
   trashIconImg.src = html.classList.contains("light")
@@ -79,5 +74,5 @@ function createTrashIconImg() {
   trashIconImg.alt = "Trash Icon | Delete Task";
   trashIconImg.classList.add("trash-icon-img");
 
-    return trashIconImg;
+  return trashIconImg;
 }

@@ -52,3 +52,4 @@ export function loadUsername() {
 
     if (savedUsername !== null) usernameElement.textContent = savedUsername;
 }
+
